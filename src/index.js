@@ -4,8 +4,8 @@ const Mutex = require('async-mutex').Mutex;
 const Semaphore = require('async-mutex').Semaphore;
 const withTimeout = require('async-mutex').withTimeout;
 const mutex = new Mutex();
-import * as Sentry from "@sentry/node";
-import { ProfilingIntegration } from "@sentry/profiling-node";
+const Sentry = require("@sentry/node");
+const { ProfilingIntegration } = require("@sentry/profiling-node");
 const fs = require('fs');
 let envFile = '.env';
 // check if .env exits on current dir:
